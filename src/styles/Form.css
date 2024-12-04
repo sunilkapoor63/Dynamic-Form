@@ -1,0 +1,105 @@
+/* src/styles/Form.css */
+
+/* Container for the entire form */
+.form-container {
+    display: flex;
+    flex-direction: column;   /* Aligns items in a column (vertically) */
+    gap: 20px;                /* Adds space between the fields */
+    max-width: 800px;         /* Limiting width for better responsiveness */
+    margin: 0 auto;           /* Center the form horizontally */
+  }
+  
+  /* Each form field (label and input/select) should be stacked vertically */
+  .form-field {
+    display: flex;
+    flex-direction: column;   /* Stack label and input/select vertically for mobile */
+    gap: 4px;                 /* Smaller space between label and input */
+  }
+  
+  /* For larger screens, arrange label and input side-by-side */
+  @media (min-width: 1024px) {
+    .form-field {
+      flex-direction: row;      /* Align label and input horizontally */
+      justify-content: space-between; /* Spread label and input across available space */
+    }
+  
+    /* Ensure labels take the same width and inputs adjust accordingly */
+    label {
+      flex: 0 0 200px;          /* Fixed width for labels */
+      text-align: right;        /* Align labels to the right */
+    }
+  
+    input,
+    select {
+      flex: 1;                  /* Allow inputs to take available width */
+    }
+  }
+  
+  /* Label for each input field */
+  label {
+    font-size: 14px;          /* Smaller font size for label */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;       /* Ensures a smaller consistent gap */
+    text-align: left;         /* Left-align labels for mobile */
+  }
+  
+  /* Style for the input and select fields */
+  input,
+  select {
+    padding: 8px;             /* Smaller padding for a more compact look */
+   margin: 5px 0px;            /* Smaller padding for a more compact look */
+    font-size: 14px;          /* Smaller font size for inputs */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    width: 100%;              /* Ensure the input takes full width */
+    box-sizing: border-box;   /* Ensures padding doesn’t increase the element width */
+  }
+  
+  /* Focus effect on input and select fields */
+  input:focus,
+  select:focus {
+    border-color: #00f2fe;
+    outline: none;
+  }
+  
+  /* Error message styling */
+  span {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
+  /* Submit button styling */
+  button[type='submit'] {
+    margin: 20px 0px;
+    padding: 12px;
+    background: linear-gradient(to right, #65d83e, #83e74e);  /* Gradient background */
+    color: white;
+    font-size: 16px;         /* Smaller font size for button */
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%;             /* Full width for the submit button */
+  }
+  
+  /* Submit button hover effect */
+  button[type='submit']:hover {
+    background: linear-gradient(to right, #38ca07, #41b503); /* Reversed gradient on hover */
+    transform: translateY(-2px); /* Slight hover effect */
+  }
+  
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 20px;
+    }
+  
+    button[type='submit'] {
+      padding: 12px;
+    }
+  }
+  

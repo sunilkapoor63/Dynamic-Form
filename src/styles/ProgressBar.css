@@ -1,0 +1,18 @@
+/* src/styles/ProgressBar.css */
+.progress-container {
+    margin-top: 20px;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background: #ddd;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    transition: width 0.3s ease;
+  }
+  

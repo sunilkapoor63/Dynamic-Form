@@ -1,0 +1,50 @@
+/* src/styles/App.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0px 3px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+      margin: 10px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
